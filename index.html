@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lloyd U. Yarkpawolo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 40px 20px;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            letter-spacing: 5px;
+            color: #fff;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 80px 20px;
+            min-height: 30vh;
+            background-color: #fff;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 1s forwards;
+            line-height: 1.8;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about, .contact {
+            margin-bottom: 20px;
+            padding: 60px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .about p, .contact p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about h2, .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #000;
+        }
+
+        .black {
+            color: #000;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+            margin: 10px;
+            height: 200px;
+            max-width: 600px;
+            position: relative;
+            flex-direction: row;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            flex: 1;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .card p {
+            font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .projects .card {
+            width: calc(50% - 20px);
+        }
+
+        .contact-card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: blue;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="https://github.com/lloyduyar?tab=repositories" blank>Github</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <header>
+        <h1>Lloyd U. Yarkpawolo</h1>
+    </header>
+    <div class="container">
+        <section id="about" class="about">
+            <h2 class="black">About Me</h2>
+            <p class="black">Hello! I'm Lloyd Urey Yarkpawolo, an aspiring electrical engineer with a passion for coding and problem-solving. Currently pursuing a bachelor’s degree in electrical engineering, I am dedicated to refining my skills in mathematics and programming to excel in my field. My GitHub profile highlights a variety of projects that showcase my commitment to innovative solutions and technology. From developing dynamic search features to mastering C programming, my work reflects a strong foundation in both software and hardware principles. I’m focused on improving my algebra skills and understanding fundamental physics concepts. I also enjoy tackling coding challenges and applying these skills to real-world problems. Thank you for visiting my portfolio. I’m excited about the future and eager to contribute to the field of electrical engineering.</p>
+        </section>
+        <section id="contact" class="contact">
+            <h2 class="black">Get in Touch!</h2>
+            <div class="contact-card">
+                <p class="black">You can reach me via email at <a href="mailto:lloydureyyarkpawolo@gmail.com">lloydureyyarkpawolo@gmail.com</a>.</p>
+                <p class="black">Visit my personal website or connect with me on social media:</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lilnellywrld/" target="_blank" class="black">Instagram</a>
+                    <a href="https://facebook.com/lilnellywrld" target="_blank" class="black">Facebook</a>
+                    <a href="https://x.com/LloydUrey" target="_blank" class="black">X (formerly Twitter)</a>
+                    <a href="https://www.linkedin.com/in/lloyd-urey-yarkpawolo-189b14329/" target="_blank" class="black">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+        <footer class="black">
+            &copy; 2024 Lloyd Urey Yarkpawolo. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
