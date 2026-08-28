@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lloyd Urey</title>
     <style>
+        @media (max-width: 700px) {
+    .projects .card {
+        width: 100%;
+    }
+}
         * {
             margin: 0;
             padding: 0;
@@ -147,7 +152,7 @@
             font-size: 1rem;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
+            white-space: normal;
         }
 
         .projects {
@@ -189,6 +194,32 @@
         .social-links a:hover {
             text-decoration: underline;
         }
+        .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.projects .card {
+    width: calc(50% - 20px);
+}
+
+.card-content {
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: underline;
+}
     </style>
 </head>
 <body>
@@ -209,11 +240,48 @@
                     This portfolio serves as a record of that progression—from early software projects to increasingly advanced engineering work. 
                     I’m continuing to develop toward a career in electrical engineering while building projects that combine hardware, software, and real-world problem solving.</p>
         </section>
-        <section id="projects" class="projects">
-            <h2 class="black">Projects</h2>
-            <p class="black">Here are some of the projects I've worked on:</p>
-            <!-- Project items would go here -->
-        </section>
+        <section id="projects">
+    <h2 class="black">Projects</h2>
+    <p class="black">Here are some of the projects I've worked on:</p>
+
+    <div class="projects">
+
+        <div class="card" style="background-image: url('iss-tracker.png');">
+            <div class="card-content">
+                <h3>ISS Tracker</h3>
+                <p>Real-time ISS location tracking using latitude, longitude, APIs, and an interactive map.</p>
+
+                <a href="https://iss-tracker-1-63mi.onrender.com/"
+                   target="_blank">
+                    Live Demo
+                </a>
+
+                <a href="YOUR-GITHUB-REPO-LINK"
+                   target="_blank">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="card" style="background-image: url('message-app.png');">
+            <div class="card-content">
+                <h3>Persistent Message App</h3>
+                <p>Node.js and Express application that stores user-submitted messages in a persistent database.</p>
+
+                <a href="https://lloyd-5vuw.onrender.com/"
+                   target="_blank">
+                    Live Demo
+                </a>
+
+                <a href="YOUR-GITHUB-REPO-LINK"
+                   target="_blank">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
         <section id="contact" class="contact">
             <h2 class="black">Get in Touch!</h2>
             <div class="contact-card">
@@ -236,8 +304,11 @@
             </div>
         </section>
         <footer class="black">
-            &copy; 2024 Lloyd Urey. All rights reserved.
-        </footer>
+    &copy; <span id="year"></span> Lloyd Urey. All rights reserved.
+</footer>
     </div>
+    <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
